@@ -19,9 +19,10 @@ are an [open standard](https://agentskills.io), not a single-vendor format.
 | Skill | What it does |
 |---|---|
 | **[reviewloop](skills/reviewloop/SKILL.md)** | Drives a PR to *all-clear* across **every** reviewer — Greptile, CodeRabbit, Copilot, other bots, and human teammates. Bots get re-triggered and re-checked in a loop; humans get one pass (addressed + re-requested) then it hands back. The reviewer-agnostic answer to "clear all the reviews on this PR." |
+| **[ciloop](skills/ciloop/SKILL.md)** | Drives a *failing CI run back to green*. Pulls the real error from the GitHub Actions logs, **reproduces it locally** (so it's not burning CI minutes per attempt), fixes the failures it's confident about, pushes once, and re-watches — looping until green. Hands back flaky/infra failures instead of flailing. The red-CI twin of reviewloop. |
 | **[standup](skills/standup/SKILL.md)** | Generates a paste-ready daily standup from your GitHub activity — merged, opened, and reviewed PRs across the whole org — rendered as a *Done / Today / Blockers* block. Weekday-aware window (Monday reaches back to Friday). No more "what did I do yesterday?" |
 
-Install them **individually** (`reviewloop`, `standup`) or grab the **`everything`** bundle.
+Install them **individually** (`reviewloop`, `ciloop`, `standup`) or grab the **`everything`** bundle.
 
 ## Install
 
@@ -34,8 +35,9 @@ which exposes each skill as its own plugin (`reviewloop`, `standup`) plus an `ev
 ```bash
 claude plugin marketplace add BiswaViraj/agent-skills
 claude plugin install reviewloop@agent-skills   # just reviewloop
+claude plugin install ciloop@agent-skills       # just ciloop
 claude plugin install standup@agent-skills      # just standup
-claude plugin install everything@agent-skills   # both
+claude plugin install everything@agent-skills   # all three
 ```
 
 Or, with [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), both skills are in the
@@ -82,6 +84,12 @@ cursor plugin install everything@agent-skills
 
 or "clear all the reviews", "address every reviewer", "loop until the PR is clean".
 
+**ciloop** — when CI is red:
+
+> ciloop
+
+or "fix the failing CI", "make the checks pass", "loop until CI is green".
+
 **standup** — anytime:
 
 > write my standup
@@ -99,6 +107,9 @@ agent-skills/
    ├─ reviewloop/
    │  ├─ SKILL.md
    │  └─ references/github-mechanics.md
+   ├─ ciloop/
+   │  ├─ SKILL.md
+   │  └─ references/gh-ci.md
    └─ standup/
       ├─ SKILL.md
       └─ standup.sh
@@ -125,7 +136,8 @@ your plugins + MCP servers (including these skills) into any project.
 
 <sub>Keywords: claude code skills · agent skills · SKILL.md · github copilot cli plugins · codex cli
 skills · cursor skills · automated pr review · greptile / coderabbit / copilot review loop · ai code
-review automation · anthropic agent skills marketplace</sub>
+review automation · auto-fix failing CI · github actions fix loop · automated standup generator ·
+anthropic agent skills marketplace</sub>
 
 ## License
 

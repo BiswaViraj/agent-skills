@@ -34,16 +34,28 @@
       "tags": ["standup", "scrum", "git", "github", "productivity", "skills"]
     },
     {
-      "name": "everything",
-      "description": "Install all of Biswajeet's skills at once (reviewloop + standup).",
+      "name": "ciloop",
+      "description": "Drive a failing CI run back to green — pull the real error from the GitHub Actions logs, reproduce it locally, fix the confident failures, push once, and re-watch until green. The red-CI twin of reviewloop.",
       "version": "1.0.0",
       "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
       "source": "./",
       "strict": false,
-      "skills": ["./skills/reviewloop", "./skills/standup"],
+      "skills": ["./skills/ciloop"],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["bundle", "skills", "code-review", "standup"]
+      "tags": ["ci", "github-actions", "continuous-integration", "automation", "tests", "skills"]
+    },
+    {
+      "name": "everything",
+      "description": "Install all of Biswajeet's skills at once (reviewloop + ciloop + standup).",
+      "version": "1.0.0",
+      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/reviewloop", "./skills/ciloop", "./skills/standup"],
+      "category": "workflow",
+      "homepage": "https://github.com/BiswaViraj/agent-skills",
+      "tags": ["bundle", "skills", "code-review", "ci", "standup"]
     }
   ]
 }

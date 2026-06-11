@@ -1,7 +1,7 @@
 {
   "name": "everything",
   "version": "1.0.0",
-  "description": "All of Biswajeet's agent skills (reviewloop + standup). reviewloop drives a PR to all-clear across every reviewer; standup generates a paste-ready daily update from your GitHub activity.",
+  "description": "All of Biswajeet's agent skills (reviewloop + ciloop + standup). reviewloop drives a PR to all-clear across every reviewer; ciloop drives failing CI back to green; standup generates a paste-ready daily update from your GitHub activity.",
   "author": {
     "name": "Biswajeet Das",
     "email": "biswajeetdas18@gmail.com",
@@ -15,7 +15,7 @@
   "interface": {
     "displayName": "Biswajeet's Skills",
     "shortDescription": "PR review automation + daily standups for coding agents",
-    "longDescription": "reviewloop drives a pull request to a fully-clear state across every reviewer (Greptile, CodeRabbit, Copilot, humans), re-triggering bots and looping until nothing actionable remains. standup generates a paste-ready daily update from your merged, opened, and reviewed PRs across the org.",
+    "longDescription": "reviewloop drives a pull request to a fully-clear state across every reviewer (Greptile, CodeRabbit, Copilot, humans), re-triggering bots and looping until nothing actionable remains. ciloop drives a failing CI run back to green by reproducing failures locally, fixing the confident ones, and re-watching. standup generates a paste-ready daily update from your merged, opened, and reviewed PRs across the org.",
     "developerName": "Biswajeet Das",
     "category": "Coding",
     "capabilities": ["Interactive", "Read", "Write"]
