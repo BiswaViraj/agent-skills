@@ -19,76 +19,94 @@ are an [open standard](https://agentskills.io), not a single-vendor format.
 | Skill | What it does |
 |---|---|
 | **[reviewloop](skills/reviewloop/SKILL.md)** | Drives a PR to *all-clear* across **every** reviewer — Greptile, CodeRabbit, Copilot, other bots, and human teammates. Bots get re-triggered and re-checked in a loop; humans get one pass (addressed + re-requested) then it hands back. The reviewer-agnostic answer to "clear all the reviews on this PR." |
+| **[standup](skills/standup/SKILL.md)** | Generates a paste-ready daily standup from your GitHub activity — merged, opened, and reviewed PRs across the whole org — rendered as a *Done / Today / Blockers* block. Weekday-aware window (Monday reaches back to Friday). No more "what did I do yesterday?" |
+
+Install them **individually** (`reviewloop`, `standup`) or grab the **`everything`** bundle.
 
 ## Install
 
-This repo is a marketplace. Each harness reads its own manifest at the repo root
-(`.claude-plugin/`, `.codex-plugin/`, `.cursor-plugin/`) — all pointing at the same `skills/` folder.
+This repo is a marketplace. **Claude Code and Copilot CLI** read `.claude-plugin/marketplace.json`,
+which exposes each skill as its own plugin (`reviewloop`, `standup`) plus an `everything` bundle.
+**Codex and Cursor** read their own manifest and install the whole collection.
 
 ### Claude Code
 
 ```bash
 claude plugin marketplace add BiswaViraj/agent-skills
-claude plugin install reviewloop@agent-skills
+claude plugin install reviewloop@agent-skills   # just reviewloop
+claude plugin install standup@agent-skills      # just standup
+claude plugin install everything@agent-skills   # both
 ```
 
-Or, if you use [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), `reviewloop` is in the
-palette — just run `npx @biswaviraj/cc-setup@latest` and pick it.
+Or, with [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), both skills are in the
+palette — run `npx @biswaviraj/cc-setup@latest` and pick what you want.
 
 ### GitHub Copilot CLI
 
-Copilot CLI shares Claude Code's plugin/marketplace system:
+Copilot CLI shares Claude Code's plugin/marketplace system — same per-skill installs:
 
 ```bash
 copilot plugin marketplace add BiswaViraj/agent-skills
-copilot plugin install reviewloop@agent-skills
+copilot plugin install reviewloop@agent-skills   # or standup@ / everything@
 ```
 
 ### Codex CLI
 
+Installs the whole collection:
+
 ```bash
 codex plugin marketplace add BiswaViraj/agent-skills
-codex plugin install reviewloop@agent-skills
+codex plugin install everything@agent-skills
 ```
 
-Or drop the skill straight into a skills folder Codex scans
+Or drop a single skill straight into a folder Codex scans
 (`~/.agents/skills/` for personal, `<repo>/.agents/skills/` per-project):
 
 ```bash
 git clone https://github.com/BiswaViraj/agent-skills /tmp/agent-skills
-cp -r /tmp/agent-skills/skills/reviewloop ~/.agents/skills/reviewloop
+cp -r /tmp/agent-skills/skills/standup ~/.agents/skills/standup
 ```
 
 ### Cursor
 
 ```bash
 cursor plugin marketplace add BiswaViraj/agent-skills
-cursor plugin install reviewloop@agent-skills
+cursor plugin install everything@agent-skills
 ```
 
 ## Usage
 
-Once installed, on a branch with an open PR:
+**reviewloop** — on a branch with an open PR:
 
 > reviewloop this PR
 
 or "clear all the reviews", "address every reviewer", "loop until the PR is clean".
 
+**standup** — anytime:
+
+> write my standup
+
+or "what did I do since Friday", "what did I ship this week".
+
 ## Layout
 
 ```
 agent-skills/
-├─ .claude-plugin/      # Claude Code + Copilot CLI (marketplace.json + plugin.json)
+├─ .claude-plugin/      # Claude Code + Copilot CLI — marketplace.json (per-skill plugins + bundle)
 ├─ .codex-plugin/       # Codex CLI (plugin.json)
 ├─ .cursor-plugin/      # Cursor (plugin.json)
 └─ skills/
-   └─ reviewloop/
+   ├─ reviewloop/
+   │  ├─ SKILL.md
+   │  └─ references/github-mechanics.md
+   └─ standup/
       ├─ SKILL.md
-      └─ references/github-mechanics.md
+      └─ standup.sh
 ```
 
-Adding a skill: drop a new folder under `skills/`, it ships with the plugin. To make it separately
-installable, add an entry to `.claude-plugin/marketplace.json`.
+Adding a skill: drop a new folder under `skills/`, then add a plugin entry to
+`.claude-plugin/marketplace.json` with `"skills": ["./skills/<name>"]` to make it separately
+installable (and append it to the `everything` bundle's `skills` array).
 
 ## Related
 

@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "agent-skills",
   "metadata": {
-    "description": "Biswajeet Das's portable agent-skills marketplace. Harness-neutral SKILL.md skills for Claude Code, GitHub Copilot CLI, Codex, and Cursor."
+    "description": "Biswajeet Das's portable agent-skills marketplace. Harness-neutral SKILL.md skills for Claude Code, GitHub Copilot CLI, Codex, and Cursor — installable per-skill or as a bundle."
   },
   "owner": {
     "name": "Biswajeet Das",
@@ -13,14 +13,37 @@
       "name": "reviewloop",
       "description": "Drive a PR to all-clear across every reviewer — Greptile, CodeRabbit, Copilot, other bots, and humans. Bots get re-triggered and re-checked in a loop; humans get one pass then hand back.",
       "version": "1.0.0",
-      "author": {
-        "name": "Biswajeet Das",
-        "email": "biswajeetdas18@gmail.com"
-      },
+      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
       "source": "./",
+      "strict": false,
+      "skills": ["./skills/reviewloop"],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
       "tags": ["pr", "code-review", "greptile", "coderabbit", "copilot", "automation", "skills"]
+    },
+    {
+      "name": "standup",
+      "description": "Generate a paste-ready daily standup from your GitHub activity — merged, opened, and reviewed PRs across the org, rendered as a Done / Today / Blockers block.",
+      "version": "1.0.0",
+      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/standup"],
+      "category": "workflow",
+      "homepage": "https://github.com/BiswaViraj/agent-skills",
+      "tags": ["standup", "scrum", "git", "github", "productivity", "skills"]
+    },
+    {
+      "name": "everything",
+      "description": "Install all of Biswajeet's skills at once (reviewloop + standup).",
+      "version": "1.0.0",
+      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/reviewloop", "./skills/standup"],
+      "category": "workflow",
+      "homepage": "https://github.com/BiswaViraj/agent-skills",
+      "tags": ["bundle", "skills", "code-review", "standup"]
     }
   ]
 }

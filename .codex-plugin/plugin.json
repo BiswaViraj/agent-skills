@@ -1,7 +1,7 @@
 {
-  "name": "reviewloop",
+  "name": "everything",
   "version": "1.0.0",
-  "description": "Drive a PR to all-clear across every reviewer — Greptile, CodeRabbit, Copilot, other bots, and humans. Bots get re-triggered and re-checked in a loop; humans get one pass then hand back.",
+  "description": "All of Biswajeet's agent skills (reviewloop + standup). reviewloop drives a PR to all-clear across every reviewer; standup generates a paste-ready daily update from your GitHub activity.",
   "author": {
     "name": "Biswajeet Das",
     "email": "biswajeetdas18@gmail.com",
@@ -11,11 +11,11 @@
   "repository": "https://github.com/BiswaViraj/agent-skills",
   "license": "MIT",
   "skills": "./skills/",
-  "keywords": ["pr", "code-review", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
+  "keywords": ["pr", "code-review", "standup", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
   "interface": {
-    "displayName": "Reviewloop",
-    "shortDescription": "Loop a PR to all-clear across every reviewer — bot and human",
-    "longDescription": "Use Reviewloop to drive a pull request to a fully-clear state across every reviewer. It detects each reviewer structurally (bot vs human), re-triggers bot reviews (Greptile, CodeRabbit, Copilot) after each fix, resolves threads, and loops until nothing actionable remains. Humans get one pass — addressed and re-requested — then it hands back.",
+    "displayName": "Biswajeet's Skills",
+    "shortDescription": "PR review automation + daily standups for coding agents",
+    "longDescription": "reviewloop drives a pull request to a fully-clear state across every reviewer (Greptile, CodeRabbit, Copilot, humans), re-triggering bots and looping until nothing actionable remains. standup generates a paste-ready daily update from your merged, opened, and reviewed PRs across the org.",
     "developerName": "Biswajeet Das",
     "category": "Coding",
     "capabilities": ["Interactive", "Read", "Write"]
