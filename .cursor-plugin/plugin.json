@@ -1,0 +1,15 @@
+{
+  "name": "reviewloop",
+  "displayName": "Reviewloop",
+  "description": "Drive a PR to all-clear across every reviewer — Greptile, CodeRabbit, Copilot, other bots, and humans. Bots get re-triggered and re-checked in a loop; humans get one pass then hand back.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Biswajeet Das",
+    "email": "biswajeetdas18@gmail.com"
+  },
+  "homepage": "https://github.com/BiswaViraj/agent-skills",
+  "repository": "https://github.com/BiswaViraj/agent-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": ["pr", "code-review", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"]
+}
