@@ -22,43 +22,37 @@ are an [open standard](https://agentskills.io), not a single-vendor format.
 | **[ciloop](skills/ciloop/SKILL.md)** | Drives a *failing CI run back to green*. Pulls the real error from the GitHub Actions logs, **reproduces it locally** (so it's not burning CI minutes per attempt), fixes the failures it's confident about, pushes once, and re-watches — looping until green. Hands back flaky/infra failures instead of flailing. The red-CI twin of reviewloop. |
 | **[standup](skills/standup/SKILL.md)** | Generates a paste-ready daily standup from your GitHub activity — merged, opened, and reviewed PRs across the whole org — rendered as a *Done / Today / Blockers* block. Weekday-aware window (Monday reaches back to Friday). No more "what did I do yesterday?" |
 
-Install them **individually** (`reviewloop`, `ciloop`, `standup`) or grab the **`everything`** bundle.
+Install once — the `skills` plugin bundles all three.
 
 ## Install
 
-This repo is a marketplace. **Claude Code and Copilot CLI** read `.claude-plugin/marketplace.json`,
-which exposes each skill as its own plugin (`reviewloop`, `standup`) plus an `everything` bundle.
-**Codex and Cursor** read their own manifest and install the whole collection.
+This repo is a marketplace with **one plugin (`skills`)** that bundles all three skills. A Claude Code
+plugin loads *every* skill it contains, so a single install gets the whole set — cleanly, no duplicates.
 
 ### Claude Code
 
 ```bash
 claude plugin marketplace add BiswaViraj/agent-skills
-claude plugin install reviewloop@biswaviraj-skills   # just reviewloop
-claude plugin install ciloop@biswaviraj-skills       # just ciloop
-claude plugin install standup@biswaviraj-skills      # just standup
-claude plugin install everything@biswaviraj-skills   # all three
+claude plugin install skills@biswaviraj-skills
 ```
 
-Or, with [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), both skills are in the
-palette — run `npx @biswaviraj/cc-setup@latest` and pick what you want.
+Or, with [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), it's in the palette —
+run `npx @biswaviraj/cc-setup@latest` and pick it.
 
 ### GitHub Copilot CLI
 
-Copilot CLI shares Claude Code's plugin/marketplace system — same per-skill installs:
+Copilot CLI shares Claude Code's plugin/marketplace system:
 
 ```bash
 copilot plugin marketplace add BiswaViraj/agent-skills
-copilot plugin install reviewloop@biswaviraj-skills   # or standup@ / everything@
+copilot plugin install skills@biswaviraj-skills
 ```
 
 ### Codex CLI
 
-Installs the whole collection:
-
 ```bash
 codex plugin marketplace add BiswaViraj/agent-skills
-codex plugin install everything@biswaviraj-skills
+codex plugin install skills@biswaviraj-skills
 ```
 
 Or drop a single skill straight into a folder Codex scans
@@ -73,7 +67,7 @@ cp -r /tmp/agent-skills/skills/standup ~/.agents/skills/standup
 
 ```bash
 cursor plugin marketplace add BiswaViraj/agent-skills
-cursor plugin install everything@biswaviraj-skills
+cursor plugin install skills@biswaviraj-skills
 ```
 
 ## Usage
