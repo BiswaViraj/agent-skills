@@ -34,10 +34,10 @@ which exposes each skill as its own plugin (`reviewloop`, `standup`) plus an `ev
 
 ```bash
 claude plugin marketplace add BiswaViraj/agent-skills
-claude plugin install reviewloop@agent-skills   # just reviewloop
-claude plugin install ciloop@agent-skills       # just ciloop
-claude plugin install standup@agent-skills      # just standup
-claude plugin install everything@agent-skills   # all three
+claude plugin install reviewloop@biswaviraj-skills   # just reviewloop
+claude plugin install ciloop@biswaviraj-skills       # just ciloop
+claude plugin install standup@biswaviraj-skills      # just standup
+claude plugin install everything@biswaviraj-skills   # all three
 ```
 
 Or, with [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup), both skills are in the
@@ -49,7 +49,7 @@ Copilot CLI shares Claude Code's plugin/marketplace system — same per-skill in
 
 ```bash
 copilot plugin marketplace add BiswaViraj/agent-skills
-copilot plugin install reviewloop@agent-skills   # or standup@ / everything@
+copilot plugin install reviewloop@biswaviraj-skills   # or standup@ / everything@
 ```
 
 ### Codex CLI
@@ -58,7 +58,7 @@ Installs the whole collection:
 
 ```bash
 codex plugin marketplace add BiswaViraj/agent-skills
-codex plugin install everything@agent-skills
+codex plugin install everything@biswaviraj-skills
 ```
 
 Or drop a single skill straight into a folder Codex scans
@@ -73,7 +73,7 @@ cp -r /tmp/agent-skills/skills/standup ~/.agents/skills/standup
 
 ```bash
 cursor plugin marketplace add BiswaViraj/agent-skills
-cursor plugin install everything@agent-skills
+cursor plugin install everything@biswaviraj-skills
 ```
 
 ## Usage

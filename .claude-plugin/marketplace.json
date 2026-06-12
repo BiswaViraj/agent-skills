@@ -1,6 +1,6 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "agent-skills",
+  "name": "biswaviraj-skills",
   "metadata": {
     "description": "Biswajeet Das's portable agent-skills marketplace. Harness-neutral SKILL.md skills for Claude Code, GitHub Copilot CLI, Codex, and Cursor — installable per-skill or as a bundle."
   },
@@ -13,49 +13,99 @@
       "name": "reviewloop",
       "description": "Drive a PR to all-clear across every reviewer — Greptile, CodeRabbit, Copilot, other bots, and humans. Bots get re-triggered and re-checked in a loop; humans get one pass then hand back.",
       "version": "1.0.0",
-      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "author": {
+        "name": "Biswajeet Das",
+        "email": "biswajeetdas18@gmail.com"
+      },
       "source": "./",
       "strict": false,
-      "skills": ["./skills/reviewloop"],
+      "skills": [
+        "./skills/reviewloop"
+      ],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["pr", "code-review", "greptile", "coderabbit", "copilot", "automation", "skills"]
+      "tags": [
+        "pr",
+        "code-review",
+        "greptile",
+        "coderabbit",
+        "copilot",
+        "automation",
+        "skills"
+      ]
     },
     {
       "name": "standup",
       "description": "Generate a paste-ready daily standup from your GitHub activity — merged, opened, and reviewed PRs across the org, rendered as a Done / Today / Blockers block.",
       "version": "1.0.0",
-      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "author": {
+        "name": "Biswajeet Das",
+        "email": "biswajeetdas18@gmail.com"
+      },
       "source": "./",
       "strict": false,
-      "skills": ["./skills/standup"],
+      "skills": [
+        "./skills/standup"
+      ],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["standup", "scrum", "git", "github", "productivity", "skills"]
+      "tags": [
+        "standup",
+        "scrum",
+        "git",
+        "github",
+        "productivity",
+        "skills"
+      ]
     },
     {
       "name": "ciloop",
       "description": "Drive a failing CI run back to green — pull the real error from the GitHub Actions logs, reproduce it locally, fix the confident failures, push once, and re-watch until green. The red-CI twin of reviewloop.",
       "version": "1.0.0",
-      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "author": {
+        "name": "Biswajeet Das",
+        "email": "biswajeetdas18@gmail.com"
+      },
       "source": "./",
       "strict": false,
-      "skills": ["./skills/ciloop"],
+      "skills": [
+        "./skills/ciloop"
+      ],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["ci", "github-actions", "continuous-integration", "automation", "tests", "skills"]
+      "tags": [
+        "ci",
+        "github-actions",
+        "continuous-integration",
+        "automation",
+        "tests",
+        "skills"
+      ]
     },
     {
       "name": "everything",
       "description": "Install all of Biswajeet's skills at once (reviewloop + ciloop + standup).",
       "version": "1.0.0",
-      "author": { "name": "Biswajeet Das", "email": "biswajeetdas18@gmail.com" },
+      "author": {
+        "name": "Biswajeet Das",
+        "email": "biswajeetdas18@gmail.com"
+      },
       "source": "./",
       "strict": false,
-      "skills": ["./skills/reviewloop", "./skills/ciloop", "./skills/standup"],
+      "skills": [
+        "./skills/reviewloop",
+        "./skills/ciloop",
+        "./skills/standup"
+      ],
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["bundle", "skills", "code-review", "ci", "standup"]
+      "tags": [
+        "bundle",
+        "skills",
+        "code-review",
+        "ci",
+        "standup"
+      ]
     }
   ]
 }
