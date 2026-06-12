@@ -94,7 +94,7 @@ or "what did I do since Friday", "what did I ship this week".
 
 ```
 agent-skills/
-├─ .claude-plugin/      # Claude Code + Copilot CLI — marketplace.json (per-skill plugins + bundle)
+├─ .claude-plugin/      # Claude Code + Copilot CLI — marketplace.json (one 'skills' plugin)
 ├─ .codex-plugin/       # Codex CLI (plugin.json)
 ├─ .cursor-plugin/      # Cursor (plugin.json)
 └─ skills/
@@ -109,9 +109,8 @@ agent-skills/
       └─ standup.sh
 ```
 
-Adding a skill: drop a new folder under `skills/`, then add a plugin entry to
-`.claude-plugin/marketplace.json` with `"skills": ["./skills/<name>"]` to make it separately
-installable (and append it to the `everything` bundle's `skills` array).
+Adding a skill: drop a new folder under `skills/` — it ships with the `skills` plugin automatically
+(a plugin loads every skill it contains; no marketplace.json change needed).
 
 ## Related
 
