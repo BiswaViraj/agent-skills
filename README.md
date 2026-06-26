@@ -9,8 +9,6 @@
 ![Codex](https://img.shields.io/badge/Codex-ready-10A37F.svg)
 ![Cursor](https://img.shields.io/badge/Cursor-ready-000000.svg)
 
-![agent-skills demo](assets/agent-workflows-demo.svg)
-
 `agent-skills` is a small set of production-minded `SKILL.md` workflows by
 [BiswaViraj](https://github.com/BiswaViraj). Author once, install across **Claude Code**,
 **GitHub Copilot CLI**, **Codex**, and **Cursor** using the same source skills plus the right
@@ -82,11 +80,9 @@ cursor plugin marketplace add BiswaViraj/agent-skills
 cursor plugin install agent-workflows@biswaviraj-skills
 ```
 
-## Demos
+## Usage
 
 ### reviewloop
-
-![reviewloop demo](assets/reviewloop-demo.svg)
 
 Say:
 
@@ -98,8 +94,6 @@ Also triggers on: "clear all the reviews", "address every reviewer", "loop until
 
 ### ciloop
 
-![ciloop demo](assets/ciloop-demo.svg)
-
 Say:
 
 ```text
@@ -109,8 +103,6 @@ ciloop
 Also triggers on: "fix the failing CI", "make the checks pass", "loop until CI is green".
 
 ### standup
-
-![standup demo](assets/standup-demo.svg)
 
 Say:
 
@@ -141,7 +133,6 @@ Also triggers on: "what did I do since Friday", "what did I ship this week".
 
 ```text
 agent-skills/
-├─ assets/              # README demo/social assets
 ├─ .agents/plugins/     # Codex marketplace.json (single skills + bundle)
 ├─ .claude-plugin/      # Claude Code + Copilot CLI compatibility marketplace
 ├─ .codex-plugin/       # Root Codex bundle manifest
