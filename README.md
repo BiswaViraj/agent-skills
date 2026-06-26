@@ -195,11 +195,6 @@ marketplace entry, then you can copy in the authored `SKILL.md`.
 **See also:** [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup) — one command to load
 your plugins and MCP servers into a project.
 
-<sub>Keywords: claude code skills · agent skills · SKILL.md · github copilot cli plugins · codex cli
-skills · cursor skills · automated pr review · greptile coderabbit copilot review loop · ai code
-review automation · auto-fix failing CI · github actions fix loop · automated standup generator ·
-codex plugin marketplace · anthropic agent skills marketplace</sub>
-
 ## License
 
 MIT © BiswaViraj
