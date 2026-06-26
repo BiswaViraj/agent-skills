@@ -1,0 +1,23 @@
+{
+  "name": "agent-workflows",
+  "version": "1.0.0",
+  "description": "All of BiswaViraj's agent workflows: reviewloop, ciloop, and standup.",
+  "author": {
+    "name": "BiswaViraj",
+    "email": "biswajeetdas18@gmail.com",
+    "url": "https://github.com/BiswaViraj"
+  },
+  "homepage": "https://github.com/BiswaViraj/agent-skills",
+  "repository": "https://github.com/BiswaViraj/agent-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": ["pr", "code-review", "ci", "standup", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
+  "interface": {
+    "displayName": "BiswaViraj Agent Workflows",
+    "shortDescription": "PR review automation, CI repair, and daily standups",
+    "longDescription": "A bundle of BiswaViraj's reusable coding-agent workflows: reviewloop drives PR review feedback to a clear state, ciloop drives failing CI back to green, and standup creates a daily update from GitHub activity.",
+    "developerName": "BiswaViraj",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Read", "Write"]
+  }
+}

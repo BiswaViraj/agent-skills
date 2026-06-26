@@ -1,10 +1,10 @@
 {
-  "name": "everything",
-  "displayName": "Biswajeet's Skills",
-  "description": "All of Biswajeet's agent skills (reviewloop + ciloop + standup). reviewloop drives a PR to all-clear across every reviewer; ciloop drives failing CI back to green; standup generates a paste-ready daily update from your GitHub activity.",
+  "name": "agent-workflows",
+  "displayName": "BiswaViraj Agent Workflows",
+  "description": "All of BiswaViraj's agent workflows (reviewloop + ciloop + standup). reviewloop drives a PR to all-clear across every reviewer; ciloop drives failing CI back to green; standup generates a paste-ready daily update from your GitHub activity.",
   "version": "1.0.0",
   "author": {
-    "name": "Biswajeet Das",
+    "name": "BiswaViraj",
     "email": "biswajeetdas18@gmail.com"
   },
   "homepage": "https://github.com/BiswaViraj/agent-skills",

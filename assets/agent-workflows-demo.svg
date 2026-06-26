@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title>BiswaViraj agent-skills</title>
+<desc>Portable reviewloop, ciloop, and standup workflows for coding agents.</desc>
+<rect width="1200" height="630" fill="#f8fafc"/>
+<path d="M0 0h1200v176H0z" fill="#111827"/>
+<circle cx="1010" cy="86" r="66" fill="#7c3aed" opacity=".22"/>
+<circle cx="1098" cy="124" r="46" fill="#10a37f" opacity=".22"/>
+<text x="76" y="82" font-family="Arial" font-size="48" font-weight="800" fill="#f9fafb" text-anchor="start">agent-skills</text>
+<text x="76" y="124" font-family="Arial" font-size="23" font-weight="400" fill="#cbd5e1" text-anchor="start">Portable SKILL.md workflows for PR review, CI repair, and standups.</text>
+<text x="76" y="154" font-family="Arial" font-size="17" font-weight="400" fill="#94a3b8" text-anchor="start">Install one skill or the agent-workflows bundle across Codex, Claude Code, Copilot CLI, and Cursor.</text>
+<rect x="76" y="222" width="300" height="310" rx="18" fill="#ffffff" stroke="#dbe3ef"/>
+<rect x="76" y="222" width="300" height="8" rx="4" fill="#8b5cf6"/>
+<text x="104" y="272" font-family="Arial" font-size="25" font-weight="800" fill="#111827" text-anchor="start">reviewloop</text>
+<rect x="104" y="294" width="244" height="44" rx="10" fill="#111827"/>
+<text x="120" y="322" font-family="Menlo" font-size="14" font-weight="700" fill="#f9fafb" text-anchor="start">$ reviewloop this PR</text>
+<circle cx="118" cy="371" r="5" fill="#8b5cf6"/>
+<text x="136" y="376" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Find reviewers</text>
+<circle cx="118" cy="405" r="5" fill="#8b5cf6"/>
+<text x="136" y="410" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Fix threads</text>
+<circle cx="118" cy="439" r="5" fill="#8b5cf6"/>
+<text x="136" y="444" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Re-trigger bots</text>
+<circle cx="118" cy="473" r="5" fill="#8b5cf6"/>
+<text x="136" y="478" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Hand back humans</text>
+<rect x="425" y="222" width="300" height="310" rx="18" fill="#ffffff" stroke="#dbe3ef"/>
+<rect x="425" y="222" width="300" height="8" rx="4" fill="#10a37f"/>
+<text x="453" y="272" font-family="Arial" font-size="25" font-weight="800" fill="#111827" text-anchor="start">ciloop</text>
+<rect x="453" y="294" width="244" height="44" rx="10" fill="#111827"/>
+<text x="469" y="322" font-family="Menlo" font-size="14" font-weight="700" fill="#f9fafb" text-anchor="start">$ ciloop</text>
+<circle cx="467" cy="371" r="5" fill="#10a37f"/>
+<text x="485" y="376" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Read failed logs</text>
+<circle cx="467" cy="405" r="5" fill="#10a37f"/>
+<text x="485" y="410" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Reproduce locally</text>
+<circle cx="467" cy="439" r="5" fill="#10a37f"/>
+<text x="485" y="444" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Fix confident failures</text>
+<circle cx="467" cy="473" r="5" fill="#10a37f"/>
+<text x="485" y="478" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Watch new run</text>
+<rect x="774" y="222" width="300" height="310" rx="18" fill="#ffffff" stroke="#dbe3ef"/>
+<rect x="774" y="222" width="300" height="8" rx="4" fill="#f97316"/>
+<text x="802" y="272" font-family="Arial" font-size="25" font-weight="800" fill="#111827" text-anchor="start">standup</text>
+<rect x="802" y="294" width="244" height="44" rx="10" fill="#111827"/>
+<text x="818" y="322" font-family="Menlo" font-size="14" font-weight="700" fill="#f9fafb" text-anchor="start">$ write my standup</text>
+<circle cx="816" cy="371" r="5" fill="#f97316"/>
+<text x="834" y="376" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Merged PRs</text>
+<circle cx="816" cy="405" r="5" fill="#f97316"/>
+<text x="834" y="410" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Opened PRs</text>
+<circle cx="816" cy="439" r="5" fill="#f97316"/>
+<text x="834" y="444" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Reviewed PRs</text>
+<circle cx="816" cy="473" r="5" fill="#f97316"/>
+<text x="834" y="478" font-family="Arial" font-size="17" font-weight="400" fill="#334155" text-anchor="start">Paste-ready update</text>
+<rect x="76" y="562" width="1048" height="1" fill="#dbe3ef"/>
+<text x="76" y="594" font-family="Arial" font-size="19" font-weight="700" fill="#475569" text-anchor="start">github.com/BiswaViraj/agent-skills</text>
+<text x="1124" y="594" font-family="Arial" font-size="19" font-weight="700" fill="#475569" text-anchor="end">BiswaViraj</text>
+</svg>

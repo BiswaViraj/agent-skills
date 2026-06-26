@@ -1,0 +1,56 @@
+{
+  "name": "biswaviraj-skills",
+  "interface": {
+    "displayName": "BiswaViraj Agent Workflows"
+  },
+  "plugins": [
+    {
+      "name": "reviewloop",
+      "source": {
+        "source": "local",
+        "path": "./plugins/reviewloop"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "ciloop",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ciloop"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    },
+    {
+      "name": "standup",
+      "source": {
+        "source": "local",
+        "path": "./plugins/standup"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "agent-workflows",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agent-workflows"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Coding"
+    }
+  ]
+}

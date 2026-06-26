@@ -1,0 +1,23 @@
+{
+  "name": "standup",
+  "version": "1.0.0",
+  "description": "Generate a paste-ready daily standup from GitHub PR activity.",
+  "author": {
+    "name": "BiswaViraj",
+    "email": "biswajeetdas18@gmail.com",
+    "url": "https://github.com/BiswaViraj"
+  },
+  "homepage": "https://github.com/BiswaViraj/agent-skills",
+  "repository": "https://github.com/BiswaViraj/agent-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": ["standup", "github", "pr", "daily-update", "automation"],
+  "interface": {
+    "displayName": "Standup",
+    "shortDescription": "Write a standup from GitHub activity",
+    "longDescription": "standup generates a paste-ready Done / Today / Blockers update from merged, opened, and reviewed pull requests using GitHub CLI.",
+    "developerName": "BiswaViraj",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read"]
+  }
+}

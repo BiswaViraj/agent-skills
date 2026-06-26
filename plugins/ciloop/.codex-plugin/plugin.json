@@ -1,0 +1,23 @@
+{
+  "name": "ciloop",
+  "version": "1.0.0",
+  "description": "Drive failing GitHub Actions CI back to green by reading logs, reproducing locally, fixing, pushing once, and re-watching.",
+  "author": {
+    "name": "BiswaViraj",
+    "email": "biswajeetdas18@gmail.com",
+    "url": "https://github.com/BiswaViraj"
+  },
+  "homepage": "https://github.com/BiswaViraj/agent-skills",
+  "repository": "https://github.com/BiswaViraj/agent-skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": ["ci", "github-actions", "gh", "automation", "test", "lint"],
+  "interface": {
+    "displayName": "Ciloop",
+    "shortDescription": "Drive failing CI back to green",
+    "longDescription": "ciloop pulls the real failure from GitHub Actions logs, maps it to a local command, fixes confident failures, pushes once, and re-watches the new run. It hands back flaky, infra, secret, and ambiguous failures instead of guessing.",
+    "developerName": "BiswaViraj",
+    "category": "Coding",
+    "capabilities": ["Interactive", "Read", "Write"]
+  }
+}
