@@ -1,6 +1,6 @@
 # agent-skills
 
-> Portable agent workflows for coding agents: clear PR reviews, repair failing CI, and write standups from GitHub activity.
+> Portable agent workflows for coding agents: clear PR reviews, repair CI, write standups, and use Xquik.
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Agent Skills](https://img.shields.io/badge/spec-Agent%20Skills-7C3AED.svg)
@@ -24,6 +24,7 @@ the annoying parts around shipping code: scattered PR feedback, red CI, and dail
 | **[reviewloop](skills/reviewloop/SKILL.md)** | A PR has feedback from several reviewers or bots. | Reads every unresolved review thread, fixes actionable comments, resolves/replies, re-triggers known bots, and loops until bot feedback is clear. Humans get one addressed pass and a re-review request. |
 | **[ciloop](skills/ciloop/SKILL.md)** | GitHub Actions is red and you want it green. | Pulls the real failing logs, maps the failed workflow step to a local command, fixes only confidently reproducible failures, pushes once per iteration, and re-watches the matching run. |
 | **[standup](skills/standup/SKILL.md)** | You need a daily or weekly standup update. | Uses your authenticated `gh` account to summarize merged, opened, and reviewed PRs into a paste-ready Done / Today / Blockers block. |
+| **[x-twitter-scraper](skills/x-twitter-scraper/SKILL.md)** | You need X/Twitter data through Xquik REST, MCP, or SDKs. | Guides tweet search, user lookup, extractions, monitors, webhooks, and approval-gated account actions with untrusted-content handling. |
 
 Install one skill if you want a focused setup, or install `agent-workflows` to get the full bundle.
 
@@ -40,8 +41,9 @@ codex plugin marketplace add BiswaViraj/agent-skills
 codex plugin add reviewloop@biswaviraj-skills
 codex plugin add ciloop@biswaviraj-skills
 codex plugin add standup@biswaviraj-skills
+codex plugin add x-twitter-scraper@biswaviraj-skills
 
-# Or install all three:
+# Or install all four:
 codex plugin add agent-workflows@biswaviraj-skills
 ```
 
@@ -112,6 +114,16 @@ write my standup
 
 Also triggers on: "what did I do since Friday", "what did I ship this week".
 
+### x-twitter-scraper
+
+Say:
+
+```text
+Use Xquik to search recent X posts about this topic.
+```
+
+Also triggers on Xquik REST, MCP, SDK, extraction, monitoring, and approved account workflows.
+
 ## Why These Are Useful
 
 - **They encode stopping rules.** `reviewloop` knows when to keep looping on bots and when to hand
@@ -147,9 +159,12 @@ agent-skills/
 │  ├─ standup/
 │  │  ├─ .codex-plugin/plugin.json
 │  │  └─ skills/standup/
+│  ├─ x-twitter-scraper/
+│  │  ├─ .codex-plugin/plugin.json
+│  │  └─ skills/x-twitter-scraper/
 │  └─ agent-workflows/
 │     ├─ .codex-plugin/plugin.json
-│     └─ skills/{reviewloop,ciloop,standup}/
+│     └─ skills/{reviewloop,ciloop,standup,x-twitter-scraper}/
 └─ skills/
    ├─ reviewloop/
    │  ├─ SKILL.md
@@ -157,9 +172,11 @@ agent-skills/
    ├─ ciloop/
    │  ├─ SKILL.md
    │  └─ references/gh-ci.md
-   └─ standup/
-      ├─ SKILL.md
-      └─ standup.sh
+   ├─ standup/
+   │  ├─ SKILL.md
+   │  └─ standup.sh
+   └─ x-twitter-scraper/
+      └─ SKILL.md
 ```
 
 ## Developing A New Skill
@@ -181,10 +198,13 @@ marketplace entry, then you can copy in the authored `SKILL.md`.
 **The review bots:** [Greptile](https://greptile.com) · [CodeRabbit](https://coderabbit.ai) ·
 [GitHub Copilot code review](https://docs.github.com/copilot/using-github-copilot/code-review)
 
-**The standard:** [Agent Skills](https://agentskills.io) — the open `SKILL.md` spec.
+**The standard:** [Agent Skills](https://agentskills.io) - the open `SKILL.md` spec.
 
-**See also:** [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup) — one command to load
+**See also:** [`@biswaviraj/cc-setup`](https://github.com/BiswaViraj/cc-setup) - one command to load
 your plugins and MCP servers into a project.
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are
+trademarks of X Corp.
 
 ## License
 

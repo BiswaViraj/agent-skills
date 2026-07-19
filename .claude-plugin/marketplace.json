@@ -2,19 +2,19 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "biswaviraj-skills",
   "metadata": {
-    "description": "BiswaViraj's portable agent workflows — reviewloop, ciloop, standup. Harness-neutral SKILL.md, installs across Claude Code, Copilot CLI, Codex, and Cursor."
+    "description": "BiswaViraj's portable agent workflows - reviewloop, ciloop, standup, and x-twitter-scraper. Harness-neutral SKILL.md, installs across Claude Code, Copilot CLI, Codex, and Cursor."
   },
   "owner": { "name": "BiswaViraj", "email": "biswajeetdas18@gmail.com" },
   "plugins": [
     {
       "name": "agent-workflows",
-      "description": "All of BiswaViraj's agent workflows: reviewloop (clear every PR reviewer), ciloop (drive failing CI to green), standup (daily standup from your PRs).",
+      "description": "All of BiswaViraj's agent workflows: reviewloop, ciloop, standup, and Xquik x-twitter-scraper.",
       "version": "1.0.0",
       "author": { "name": "BiswaViraj", "email": "biswajeetdas18@gmail.com" },
       "source": "./",
       "category": "workflow",
       "homepage": "https://github.com/BiswaViraj/agent-skills",
-      "tags": ["pr", "code-review", "ci", "standup", "automation", "skills"]
+      "tags": ["pr", "code-review", "ci", "standup", "xquik", "twitter", "mcp", "automation", "skills"]
     }
   ]
 }

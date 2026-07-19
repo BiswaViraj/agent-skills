@@ -1,7 +1,7 @@
 {
   "name": "agent-workflows",
   "displayName": "BiswaViraj Agent Workflows",
-  "description": "All of BiswaViraj's agent workflows (reviewloop + ciloop + standup). reviewloop drives a PR to all-clear across every reviewer; ciloop drives failing CI back to green; standup generates a paste-ready daily update from your GitHub activity.",
+  "description": "BiswaViraj's reviewloop, ciloop, standup, and Xquik x-twitter-scraper agent workflows.",
   "version": "1.0.0",
   "author": {
     "name": "BiswaViraj",
@@ -11,5 +11,5 @@
   "repository": "https://github.com/BiswaViraj/agent-skills",
   "license": "MIT",
   "skills": "./skills/",
-  "keywords": ["pr", "code-review", "standup", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"]
+  "keywords": ["pr", "code-review", "standup", "xquik", "twitter", "mcp", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"]
 }

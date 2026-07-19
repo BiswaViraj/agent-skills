@@ -1,7 +1,7 @@
 {
   "name": "agent-workflows",
   "version": "1.0.0",
-  "description": "All of BiswaViraj's agent workflows: reviewloop, ciloop, and standup.",
+  "description": "BiswaViraj's reviewloop, ciloop, standup, and Xquik x-twitter-scraper workflows.",
   "author": {
     "name": "BiswaViraj",
     "email": "biswajeetdas18@gmail.com",
@@ -11,13 +11,18 @@
   "repository": "https://github.com/BiswaViraj/agent-skills",
   "license": "MIT",
   "skills": "./skills/",
-  "keywords": ["pr", "code-review", "ci", "standup", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
+  "keywords": ["pr", "code-review", "ci", "standup", "xquik", "twitter", "mcp", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
   "interface": {
     "displayName": "BiswaViraj Agent Workflows",
-    "shortDescription": "PR review automation, CI repair, and daily standups",
-    "longDescription": "A bundle of BiswaViraj's reusable coding-agent workflows: reviewloop drives PR review feedback to a clear state, ciloop drives failing CI back to green, and standup creates a daily update from GitHub activity.",
+    "shortDescription": "PR review, CI repair, standups, and Xquik data",
+    "longDescription": "A bundle of reusable workflows: reviewloop clears pull request feedback, ciloop repairs CI, standup summarizes GitHub activity, and x-twitter-scraper guides Xquik REST, MCP, SDK, extraction, monitoring, and approved account workflows.",
     "developerName": "BiswaViraj",
     "category": "Coding",
-    "capabilities": ["Interactive", "Read", "Write"]
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": [
+      "Clear all actionable feedback on this pull request.",
+      "Repair this failing GitHub Actions run.",
+      "Search recent X posts with Xquik."
+    ]
   }
 }
