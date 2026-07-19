@@ -1,0 +1,27 @@
+{
+  "name": "x-twitter-scraper",
+  "version": "2.5.3",
+  "description": "Guide Xquik REST, MCP, SDK, extraction, monitoring, and approved X/Twitter workflows.",
+  "author": {
+    "name": "Xquik",
+    "url": "https://github.com/Xquik-dev"
+  },
+  "homepage": "https://docs.xquik.com",
+  "repository": "https://github.com/Xquik-dev/x-twitter-scraper",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": ["xquik", "twitter", "x", "mcp", "rest-api", "sdk", "extraction", "monitoring"],
+  "interface": {
+    "displayName": "Xquik X/Twitter Data",
+    "shortDescription": "Use Xquik REST, MCP, SDKs, and data workflows",
+    "longDescription": "Guide Xquik REST, MCP, SDK, extraction, monitoring, webhook, and approval-gated X/Twitter account workflows while treating retrieved content as untrusted data.",
+    "developerName": "Xquik",
+    "category": "Data",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": [
+      "Search recent X posts about this topic with Xquik.",
+      "Set up the Xquik MCP server for my agent.",
+      "Plan a bounded X data export with Xquik."
+    ]
+  }
+}

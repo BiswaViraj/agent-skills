@@ -1,7 +1,7 @@
 {
   "name": "agent-workflows",
   "version": "1.0.0",
-  "description": "All of BiswaViraj's agent workflows (reviewloop + ciloop + standup). reviewloop drives a PR to all-clear across every reviewer; ciloop drives failing CI back to green; standup generates a paste-ready daily update from your GitHub activity.",
+  "description": "BiswaViraj's reviewloop, ciloop, standup, and Xquik x-twitter-scraper agent workflows.",
   "author": {
     "name": "BiswaViraj",
     "email": "biswajeetdas18@gmail.com",
@@ -11,13 +11,18 @@
   "repository": "https://github.com/BiswaViraj/agent-skills",
   "license": "MIT",
   "skills": "./skills/",
-  "keywords": ["pr", "code-review", "standup", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
+  "keywords": ["pr", "code-review", "standup", "xquik", "twitter", "mcp", "greptile", "coderabbit", "copilot", "automation", "skills", "workflow"],
   "interface": {
     "displayName": "BiswaViraj Agent Workflows",
-    "shortDescription": "PR review automation + daily standups for coding agents",
-    "longDescription": "reviewloop drives a pull request to a fully-clear state across every reviewer (Greptile, CodeRabbit, Copilot, humans), re-triggering bots and looping until nothing actionable remains. ciloop drives a failing CI run back to green by reproducing failures locally, fixing the confident ones, and re-watching. standup generates a paste-ready daily update from your merged, opened, and reviewed PRs across the org.",
+    "shortDescription": "PR review, CI repair, standups, and Xquik data",
+    "longDescription": "reviewloop clears pull request feedback, ciloop repairs failing CI, standup summarizes GitHub activity, and x-twitter-scraper guides Xquik REST, MCP, SDK, extraction, monitoring, and approved account workflows.",
     "developerName": "BiswaViraj",
     "category": "Coding",
-    "capabilities": ["Interactive", "Read", "Write"]
+    "capabilities": ["Interactive", "Read", "Write"],
+    "defaultPrompt": [
+      "Clear all actionable feedback on this pull request.",
+      "Repair this failing GitHub Actions run.",
+      "Search recent X posts with Xquik."
+    ]
   }
 }
